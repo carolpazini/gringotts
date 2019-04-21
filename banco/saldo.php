@@ -30,6 +30,7 @@ if(isset($_SESSION['banco']) && !empty($_SESSION['banco'])){
 
 ?>
 
+
 	<html>
 	<head>
 		<title>Gringotts</title>
@@ -42,7 +43,7 @@ if(isset($_SESSION['banco']) && !empty($_SESSION['banco'])){
 
 		
 	<div class="corpo branco fundoTopo">
-		<header class="conteudo branco">
+    <header class="conteudo branco">
 			<a href="index.php">
 				<img src="img/gringotts.png" title="Redireciona para página inicial" class="logo">
 			</a>
@@ -57,19 +58,18 @@ if(isset($_SESSION['banco']) && !empty($_SESSION['banco'])){
 				</ul>
 			</nav>
 		</header>
-
 	</div>
-		<div class ="esquerda">	
-		
+    <div class ="esquerda">
+        
 				<?php echo "Olá, ".$nome; ?>
-		</div>
+        </div>
 
-		<div>
-		<h1 class ="esquerda3" >Bem vindo à Gringotts, o banco dos bruxos e bruxas!</h1>
-		<img src="img/gringotts.gif" alt="Bem vindo a Gringots">
-		</div>
+        <h1 class ="esquerda3" >Seu saldo é de:</h1>
+        <div class ="esquerda">
+        
+			 <?php echo 'R$' .number_format($info['saldo'], 2, ',', '.');?> <br><br>
 
+		</div>	
+		
 	</body>
 	</html>
-
-	

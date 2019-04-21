@@ -1,0 +1,95 @@
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: arial, tahoma;
+	font-size: 100%;
+	box-sizing: border-box;
+
+
+}
+
+.topo{
+    height: 113px;
+    background-color: #DAA520;
+}
+
+.topo img{
+    margin-left: 55px;
+}
+
+body{
+
+	background-color: #ffffcc;
+
+}
+
+.logo{
+   width: 100px;
+   height: 113px; 
+   display: inline;
+}
+
+
+.menu{
+	
+	background-color: #dab24c;
+    border-radius: 10px;
+    float: right;
+    padding: 10px;
+    color: black;
+   
+}
+ 
+.menu ul, menu li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.menu li{
+	font-weight: 700;
+	text-transform: uppercase;
+    border-radius: 10px;
+    float: right;
+    padding-left: 10px;
+    padding-right: 25px;
+    line-height: 50px;
+    
+}
+
+.menu li:hover{
+	background-color: #DAA520;
+}
+
+.menu a:hover{
+	color: rgb(0,0,0);
+}
+
+.menu a{
+	color: rgba(255,255,255,0.9);
+}
+
+.clearfix{
+	clear: both;
+	overflow: hidden;
+	display: block;
+}
+@media screen and (max-width:480px ){
+    .menu{
+		margin-top: 10px
+	}
+
+	.menu li{
+		width: 100%;
+		border-bottom: 1px solid #ccc
+    }
+}  
+@media screen and (min-width: 481px) and (max-width: 600px) {
+    .menu{
+    width: 100%
+    }
+}
+
+.sombra{
+	box-shadow: 1px 1px 1px 1px yellow;
+}

@@ -34,11 +34,7 @@ if(isset($_POST['agencia']) && !empty($_POST['agencia'])){
 	<title>Welcome to Gringotts</title>
 
 	<style type="text/css">
-		body{
-			background-image: url("gringotts.png");
-   			background-repeat: repeat;
-			background-color: #ffffcc;	
-		}
+		
 	</style>
 
 </head>

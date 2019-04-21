@@ -3,7 +3,10 @@
 }
 
 body{
-    background-color: black;
+	background-image: url("gringotts.png");
+	background-repeat: repeat;
+	background-color: #ffffcc;
+
 }
 
 .amarela{
@@ -49,15 +52,16 @@ body{
 
 .formulario{
 	float: left;
-	width: 150px;
-	height: 70px;
+	width: 300px;
+	height: 65px;
 	background:  #ffff99;
 	display: table;
 	border-radius: 5px;
 	box-shadow:  1px 1px 1px 1px #dfee13;
 	font-family: helvetica;
 	color: #141414;
-	font-weight: bold
+	font-weight: bold;
+	opacity: 0.9;
 }
 
 .interna{
@@ -72,7 +76,9 @@ input[type = "text"], input[type = password] {
 	border-radius: 5px;
 	width: 90%;
 	text-align: left;
-	padding: 5px;
+	padding: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 
 .esqueceu{

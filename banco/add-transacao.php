@@ -39,18 +39,44 @@ if (isset($_POST['tipo'])) {
   <!DOCTYPE html>
   <html>
   <head>
-	  	<title>Movimentação</title>
-	  </head>
-	  <body>
+		<title>Gringotts</title>
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<link rel="shortcut icon" href="img/gringotts.png">
+	</head>
+
+
+	<body>
+
+		
+	<div class="corpo branco fundoTopo">
+    <header class="conteudo branco">
+			<a href="index.php">
+				<img src="img/gringotts.png" title="Redireciona para página inicial" class="logo">
+			</a>
+			<nav class="menu clearfix bordas sombra">
+				<ul>
+					<li><a href="index.php" > Home </a> </li>
+					<li><a href="dados.php" >Seus dados </a></li>
+					<li><a href="saldo.php" >Saldo </a></li>
+					<li><a href="extrato.php" >Extrato</a></li>
+					<li><a href="transacao.php" >Transações</a></li>
+					<li><a href="sair.php" >Sair</a></li>
+				</ul>
+			</nav>
+		</header>
+	</div>
+		
 	  	<form method="POST">
 	  		Tipo de transação<br>
 	  		<select name="tipo">
 	  			<option value="0">Depósito</option>
 	  			<option value="1">Retirada</option>
-	  		</s	elect><br><br>
+	  		</select><br><br>
 
-	  		Valor: <br>
-	  		<input type="text" name="valor" pattern="[0-9.,]{1,}"><br><br>
+			  Valor: <br>
+			  
+			<input type="text" name="valor" pattern="[0-9.,]{1,}"><br><br>
+			  
 	  		<input type="submit" name="adicionar" value="Adicionar">
 	  	</form>
 	  </body>

@@ -30,6 +30,7 @@ if(isset($_SESSION['banco']) && !empty($_SESSION['banco'])){
 
 ?>
 
+
 	<html>
 	<head>
 		<title>Gringotts</title>
@@ -42,7 +43,7 @@ if(isset($_SESSION['banco']) && !empty($_SESSION['banco'])){
 
 		
 	<div class="corpo branco fundoTopo">
-		<header class="conteudo branco">
+    <header class="conteudo branco">
 			<a href="index.php">
 				<img src="img/gringotts.png" title="Redireciona para página inicial" class="logo">
 			</a>
@@ -57,19 +58,60 @@ if(isset($_SESSION['banco']) && !empty($_SESSION['banco'])){
 				</ul>
 			</nav>
 		</header>
-
 	</div>
-		<div class ="esquerda">	
-		
+    <div class ="esquerda">
+       	
 				<?php echo "Olá, ".$nome; ?>
 		</div>
+            <h1 class ="esquerda3" >Extrato</h1>
+            <table border="1" class ="esquerda2">
+				<tr>
+					
+					<th>Data</th>
+					<th>Valor</th>
 
-		<div>
-		<h1 class ="esquerda3" >Bem vindo à Gringotts, o banco dos bruxos e bruxas!</h1>
-		<img src="img/gringotts.gif" alt="Bem vindo a Gringots">
-		</div>
+				</tr>
+				<?php 
+				#primeiro devemos pegar todas as movimentações
 
+				$sql = $pdo->prepare("SELECT * FROM historico WHERE idConta = :idConta");
+				$sql->bindValue(":idConta",$id);
+				$sql->execute();
+
+				# Se houver movimentação, vamos exibir com o foreach
+				if($sql-> rowCount()>0){
+					foreach ($sql->fetchAll() as $item) {
+				?>
+
+						<tr>
+							<!-- aqui o item contem a data da operação q esta sendo convertida para caractere pela função strtotime, e enviada para date que vai formatar com dia mes Ano horas e minutos -->
+							<td align="right">
+
+							<?php echo date('d/m/Y H:i', strtotime($item['dataOperacao'])); ?>
+								
+							</td>
+							
+								<td align="right">
+
+								<?php if ($item['tipo'] == '0'): ?> 
+								<font color="green"> R$ <?php echo number_format($item['valor'], 2, ',', '.') ?> </font>
+
+							<?php else: ?>
+
+							<font color="red"> - R$ <?php echo number_format($item['valor'], 2, ',', '.')  ?></font>
+
+								<?php endif; ?>
+
+								</td>
+						</tr>
+
+						<?php
+					}
+				}
+
+						?>
+			</table>
+			</div>
+		
 	</body>
 	</html>
-
-	
