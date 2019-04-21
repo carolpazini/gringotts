@@ -1,0 +1,18 @@
+CREATE DATABASE banco;
+USE banco;
+CREATE TABLE contas(
+    id  int(11) AUTO_INCREMENT PRIMARY KEY,
+    titular varchar(50),
+    agencia int(11),
+    conta int(11),
+    senha varchar(32),
+    saldo decimal(10,2)
+);
+
+CREATE TABLE historico(
+	id int(11) AUTO_INCREMENT PRIMARY KEY,
+    idConta int(11),
+    tipo tinyint(1),
+    valor decimal(10,2),
+    dataOperacao datetime
+);

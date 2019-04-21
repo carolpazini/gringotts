@@ -1,0 +1,89 @@
+*{
+	margin-top: 0
+}
+
+body{
+    background-color: black;
+}
+
+.amarela{
+	background-color: yellow;
+}
+
+.data{
+	margin: auto;
+	height: 25px;
+	width: 500px;
+	border-style: none solid solid solid;
+	border-color: white;
+	border-radius: 0px 0px 15px 15px;
+	box-shadow: 1px 1px 1px yellow;
+	color: black;
+	font-family: helvetica;
+	font-weight: 100;
+	text-align: center;
+}
+
+.fonte{
+	font-family: "Magorian Regular",Georgia,Times,"Times New Roman",serif;
+	font-size: 50px;
+	color: black;
+	text-shadow: 1px 1px 1px #d2dbbe
+
+}
+
+.topo{
+	border-color: white;
+	border-radius: 0px 0px 15px 15px;
+	box-shadow: 1px 1px 1px yellow;
+	padding-left: 20px;
+	margin-top: 0;
+	background-color: #b6da37;
+	height: 80px;
+	background: -webkit-gradient(linear , left top , left bottom , from(#fbff0891), to(#ecbf2d8f))
+}
+
+.centraliza{
+	margin-top: 75px
+}
+
+.formulario{
+	float: left;
+	width: 150px;
+	height: 70px;
+	background:  #ffff99;
+	display: table;
+	border-radius: 5px;
+	box-shadow:  1px 1px 1px 1px #dfee13;
+	font-family: helvetica;
+	color: #141414;
+	font-weight: bold
+}
+
+.interna{
+	margin: auto;
+	text-align: left;
+	padding: 20px;
+}
+
+input[type = "text"], input[type = password] {
+	height: 25px;
+	line-height: 25px;
+	border-radius: 5px;
+	width: 90%;
+	text-align: left;
+	padding: 5px;
+}
+
+.esqueceu{
+	color: black;
+	font-size: 10px;
+}
+
+.centralizaBotao{
+	color: #313a08;
+	font-weight: bold;
+	background-color: #dfee13;
+	border-radius: 4px;
+	font-size: 20px;
+}
